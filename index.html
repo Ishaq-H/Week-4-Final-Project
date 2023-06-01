@@ -4,84 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marvel</title>
+    <title>CinePop</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="index.js"></script>
     <script
-      src="https://kit.fontawesome.com/c0e2b7c547.js"
+      src="https://kit.fontawesome.com/79274f9870.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <section id="landing-page">
-      <nav>
-        <figure id="nav__logo-wrapper">
-          <img id="nav__logo" src="assets/logo.png" alt="" />
-        </figure>
-        <ul class="nav__link--list">
-          <li class="nav__link">
-            <a class="link__text" href="#">Home</a>
-          </li>
-          <li class="nav__link">
-            <a class="link__text link__characters" href="">Characters</a>
-          </li>
-          <li class="nav__link">
-            <a class="link__text" href="">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
+    <main>
+      <section id="main">
+        <nav>
+          <a class="nav__logo--wrapper" href="#">
+            <img src="assets/logo.jpg" alt="" class="nav__logo" />
+          </a>
+          <ul class="nav__links">
+            <li class="nav__link--wrapper">
+              <a
+                href=""
+                class="nav__link link__hover-effect link__hover-effect--black"
+                >Home</a
+              >
+            </li>
+            <li class="nav__link--wrapper">
+              <a
+                href=""
+                class="nav__link link__hover-effect link__hover-effect--black"
+                >Movies</a
+              >
+            </li>
+            <li class="nav__link--wrapper">
+              <a
+                href=""
+                class="nav__link link__hover-effect link__hover-effect--black"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-    <section id="main">
-      <div class="container main__container">
-        <img
-          src="assets/website_background.jpg"
-          class="main__background"
-          alt=""
-        />
-        <div class="main__content">
-          <div class="main__search">
-            <input
-              id="main__input"
-              type="text"
-              placeholder="Search for characters"
-            />
-            <button class="search__button">Search</button>
+        <header>
+          <div class="container">
+            <div class="header__row">
+              <figure class="header__logo--wrapper">
+                <a href="#"
+                  ><img class="header__logo" src="assets/popcorn.png" alt=""
+                /></a>
+              </figure>
+              <div class="header__search">
+                <form action="" class="header__search--submit">
+                  <input
+                    type="text"
+                    class="search__input"
+                    placeholder="Search movies here"
+                  />
+                  <div class="header__search--button">
+                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="results">
-      <div class="container container__results">
-        <h1 class="results__found">6 Heroes Found</h1>
-        <select id="sort">
-          <option value="">Sort</option>
-          <option value="alphabetical ascension">Name, A-Z</option>
-          <option value="alphabetical descension">Name, Z-A</option>
-        </select>
-      </div>
-      <div class="results__heroes">
-        <div class="result__hero">
-          <figure class="hero__img">
-            <img src="assets/hero__img.jpg" alt="" class="hero" />
-          </figure>
-          <div class="hero__description">
-            <h2 class="hero__name">Hero Name</h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer__container">
-        <div class="footer__row">
-          <h1 class="footer__title">Marvel Characters Ltd</h1>
-          <h1 class="footer__rights">
-            Copyright &copy Marvel Encyclopedia 2023
-          </h1>
-        </div>
-      </div>
-    </footer>
+        </header>
+      </section>
+    </main>
   </body>
 </html>
