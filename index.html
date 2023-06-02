@@ -58,6 +58,7 @@
                     type="text"
                     class="search__input"
                     placeholder="Search movies here"
+                    onchange="onSearchChange(event)"
                   />
                   <div class="header__search--button">
                     <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
@@ -67,6 +68,38 @@
             </div>
           </div>
         </header>
+      </section>
+
+      <section id="movies">
+        <div class="container">
+          <div class="movies__row">
+            <div class="movies__top">
+              <div class="movies__search">
+                Search: <span class="search__results"></span>
+              </div>
+              <div class="movies__filter">
+                <select name="filter" id="filter">
+                  <option value="" selected>Filter</option>
+                  <option value="">A-Z</option>
+                  <option value="">Z-A</option>
+                  <option value="">Highest Rating</option>
+                  <option value="">Lowest Rating</option>
+                </select>
+              </div>
+            </div>
+            <div class="movies__bottom">
+              <div class="movie__wrapper">
+                <figure class="movie__img--wrapper">
+                  <img src="assets/poster.jpg" alt="" class="movie__img" />
+                </figure>
+                <div class="movie__information">
+                  <h2 class="movie__title">Blade Runner 2049</h2>
+                  <h2 class="movie__year">2012</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
