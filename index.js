@@ -8,9 +8,10 @@ async function renderMovies(search) {
     `https://www.omdbapi.com/?i=tt3896198&apikey=bdab0567&s=${search}`
   );
   const moviesResult = await movies.json();
-  moviesWrapperEl.innerHTML = moviesResult
-    .map((movie) => moviesHTML(movie))
-    .join("");
+  console.log(moviesResult);
+  moviesWrapperEl.innerHTML = moviesResult.Search.map((movie) =>
+    moviesHTML(movie)
+  ).join("");
 }
 
 function moviesHTML(movie) {
