@@ -28,6 +28,7 @@ function moviesHTML(movie) {
 }
 
 function onSearchChange(event) {
+  console.log(`1`);
   const search = event.target.value;
   searchResultsEl.innerHTML = search;
   event.preventDefault();
@@ -35,3 +36,5 @@ function onSearchChange(event) {
 }
 
 renderMovies();
+moviesHTML();
+onSearchChange();
