@@ -1,6 +1,6 @@
 // API: http://www.omdbapi.com/?i=tt3896198&apikey=bdab0567
 
-const moviesWrapperEl = document.querySelector(`.movie__wrapper`);
+const moviesWrapperEl = document.querySelector(`.movie__bottom`);
 const searchResultsEl = document.querySelector(`.search__results`);
 
 async function renderMovies(search) {
