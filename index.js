@@ -1,6 +1,6 @@
 // API: http://www.omdbapi.com/?i=tt3896198&apikey=bdab0567
 
-const moviesWrapperEl = document.querySelector(`.movies__bottom`);
+const moviesWrapperEl = document.querySelector(`.movie__wrapper`);
 const searchResultsEl = document.querySelector(`.search__results`);
 
 async function renderMovies(search) {
@@ -15,8 +15,7 @@ async function renderMovies(search) {
 }
 
 function moviesHTML(movie) {
-  return `<div class="movies__bottom">
-    <div class="movie__wrapper">
+  return `<div class="movie__wrapper">
       <figure class="movie__img--wrapper">
         <img src="${movie.Poster}" alt="" class="movie__img" />
       </figure>
@@ -24,12 +23,10 @@ function moviesHTML(movie) {
         <h2 class="movie__title">${movie.Title}</h2>
         <h2 class="movie__year">${movie.Year}</h2>
       </div>
-    </div>
     </div>`;
 }
 
 function onSearchChange(event) {
-  console.log(`1`);
   const search = event.target.value;
   searchResultsEl.innerHTML = search;
   event.preventDefault();
@@ -37,5 +34,3 @@ function onSearchChange(event) {
 }
 
 renderMovies();
-moviesHTML();
-onSearchChange();
