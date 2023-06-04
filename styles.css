@@ -100,8 +100,8 @@ nav {
 
 /* HEADER */
 
-header {
-  /* padding-bottom: 400px; */
+.header__padding {
+  padding-bottom: 320px;
 }
 
 .header__row {
@@ -178,6 +178,10 @@ header {
 
 /* MOVIES */
 
+.movies__container {
+  display: none;
+}
+
 .movies__row {
   display: flex;
   flex-direction: column;
@@ -214,7 +218,6 @@ header {
   align-items: center;
   margin-top: 48px;
   width: 100%;
-  display: none;
 }
 
 .movie__wrapper {

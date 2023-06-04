@@ -48,7 +48,7 @@
           </ul>
         </nav>
 
-        <header>
+        <header class="header__padding" id="header">
           <div class="container">
             <div class="header__row">
               <figure class="header__logo--wrapper">
@@ -75,19 +75,27 @@
       </section>
 
       <section id="movies">
-        <div class="container">
+        <div class="container movies__container">
           <div class="movies__row">
             <div class="movies__top">
               <div class="movies__search">
                 Search: <span class="search__results"></span>
               </div>
               <div class="movies__filter">
-                <select name="filter" id="filter">
-                  <option value="" selected>Filter</option>
-                  <option value="">A-Z</option>
-                  <option value="">Z-A</option>
-                  <option value="">Highest Rating</option>
-                  <option value="">Lowest Rating</option>
+                <select
+                  name="filter"
+                  id="filter"
+                  onchange="filterMovies(event)"
+                >
+                  <option class="movies__filter--option" value="" selected>
+                    Filter
+                  </option>
+                  <option class="movies__filter--option" value="new">
+                    Newest
+                  </option>
+                  <option class="movies__filter--option" value="old">
+                    Oldest
+                  </option>
                 </select>
               </div>
             </div>
@@ -97,8 +105,8 @@
                   <img src="assets/poster.jpg" alt="" class="movie__img" />
                 </figure>
                 <div class="movie__information">
-                  <h2 class="movie__title">Blade Runner 2049</h2>
-                  <h2 class="movie__year">2012</h2>
+                  <h2 class="movie__title">No movie found</h2>
+                  <h2 class="movie__year">0000</h2>
                 </div>
               </div>
             </div>
