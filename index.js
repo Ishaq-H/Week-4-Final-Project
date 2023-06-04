@@ -43,13 +43,9 @@ async function renderMovies(search) {
 
 async function filterMovies(event) {
   const filterOption = event.target.value;
-  const movies = await fetch(
-    `https://www.omdbapi.com/?i=tt3896198&apikey=bdab0567&s=${search}`
-  );
-  const moviesResult = await movies.json();
   if (filterOption === "new") {
-    moviesResult.Search.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
+    moviesData.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
   } else if (filterOption === "old") {
-    moviesResult.Search.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
+    moviesData.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
   }
 }
