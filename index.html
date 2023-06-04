@@ -16,7 +16,11 @@
     <main>
       <section id="main">
         <nav>
-          <a class="nav__logo--wrapper" href="#">
+          <a
+            class="nav__logo--wrapper"
+            onclick="window.location.reload()"
+            href="#"
+          >
             <img src="assets/logo.jpg" alt="" class="nav__logo" />
           </a>
           <ul class="nav__links">
@@ -60,8 +64,8 @@
                     placeholder="Search movies here"
                     onchange="onSearchChange(event)"
                   />
-                  <div class="header__search--button">
-                    <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+                  <div class="header__search--button" onclick="showMovies()">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                   </div>
                 </form>
               </div>

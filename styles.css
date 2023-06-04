@@ -214,12 +214,21 @@ header {
   align-items: center;
   margin-top: 48px;
   width: 100%;
+  display: none;
 }
 
 .movie__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 20%;
+  margin: 24px;
+}
+
+.movie__img--wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .movie__information {

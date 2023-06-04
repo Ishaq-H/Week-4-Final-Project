@@ -1,17 +1,10 @@
 // API: http://www.omdbapi.com/?i=tt3896198&apikey=bdab0567
 
-const moviesWrapperEl = document.querySelector(`.movie__bottom`);
+const moviesWrapperEl = document.querySelector(`.movies__bottom`);
 const searchResultsEl = document.querySelector(`.search__results`);
 
-async function renderMovies(search) {
-  const movies = await fetch(
-    `https://www.omdbapi.com/?i=tt3896198&apikey=bdab0567&s=${search}`
-  );
-  const moviesResult = await movies.json();
-  console.log(moviesResult);
-  moviesWrapperEl.innerHTML = moviesResult.Search.map((movie) =>
-    moviesHTML(movie)
-  ).join("");
+function showMovies() {
+  document.querySelector(`.movies__bottom`).style.display = "flex";
 }
 
 function moviesHTML(movie) {
@@ -33,4 +26,17 @@ function onSearchChange(event) {
   renderMovies(search);
 }
 
-renderMovies();
+async function renderMovies(search) {
+  const movies = await fetch(
+    `https://www.omdbapi.com/?i=tt3896198&apikey=bdab0567&s=${search}`
+  );
+  const moviesResult = await movies.json();
+  console.log(moviesResult);
+  moviesWrapperEl.innerHTML = moviesResult.Search.map((movie) =>
+    moviesHTML(movie)
+  ).join("");
+}
+
+setTimeout(() => {
+  renderMovies();
+});
