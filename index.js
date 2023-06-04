@@ -3,6 +3,7 @@
 const moviesWrapperEl = document.querySelector(`.movies__bottom`);
 const searchResultsEl = document.querySelector(`.search__results`);
 const headerEl = document.querySelector(`#header`);
+let moviesData = [];
 
 function showMovies() {
   document.querySelector(`.movies__container`).style.display = "flex";
@@ -33,6 +34,7 @@ async function renderMovies(search) {
     `https://www.omdbapi.com/?i=tt3896198&apikey=bdab0567&s=${search}`
   );
   const moviesResult = await movies.json();
+  moviesData = moviesResult.Search;
   console.log(moviesResult);
   moviesWrapperEl.innerHTML = moviesResult.Search.map((movie) =>
     moviesHTML(movie)
