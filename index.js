@@ -3,7 +3,6 @@
 const moviesWrapperEl = document.querySelector(`.movies__bottom`);
 const searchResultsEl = document.querySelector(`.search__results`);
 const headerEl = document.querySelector(`#header`);
-let moviesData = [];
 
 function showMovies() {
   document.querySelector(`.movies__container`).style.display = "flex";
@@ -34,8 +33,6 @@ async function renderMovies(search) {
     `https://www.omdbapi.com/?i=tt3896198&apikey=bdab0567&s=${search}`
   );
   const moviesResult = await movies.json();
-  moviesData = moviesResult.Search;
-  console.log(moviesResult);
   moviesWrapperEl.innerHTML = moviesResult.Search.map((movie) =>
     moviesHTML(movie)
   ).join("");
@@ -44,8 +41,8 @@ async function renderMovies(search) {
 async function filterMovies(event) {
   const filterOption = event.target.value;
   if (filterOption === "new") {
-    moviesData.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
+    moviesResult.Search.sort((a, b) => b.Year - a.Year);
   } else if (filterOption === "old") {
-    moviesData.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
+    moviesResult.Search.sort((a, b) => a.Year - b.Year);
   }
 }
