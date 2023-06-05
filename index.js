@@ -35,16 +35,18 @@ async function renderMovies(search) {
   );
   let moviesResult = await movies.json();
   movies = moviesResult.Search;
+  console.log(movies);
   moviesWrapperEl.innerHTML = moviesResult.Search.map((movie) =>
     moviesHTML(movie)
   ).join("");
 }
 
-async function filterMovies(event) {
+async function sortMovies(event) {
   const filterOption = event.target.value;
   if (filterOption === "new") {
     movies.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
   } else if (filterOption === "old") {
     movies.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
   }
+  moviesWrapperEl.innerHTML = movies.map((movie) => moviesHTML(movie)).join("");
 }
