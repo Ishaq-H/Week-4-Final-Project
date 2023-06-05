@@ -41,8 +41,8 @@ async function renderMovies(search) {
 async function filterMovies(event) {
   const filterOption = event.target.value;
   if (filterOption === "new") {
-    moviesResult.Search.sort((a, b) => b.Year - a.Year);
+    moviesResult.Search.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
   } else if (filterOption === "old") {
-    moviesResult.Search.sort((a, b) => a.Year - b.Year);
+    moviesResult.Search.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
   }
 }
