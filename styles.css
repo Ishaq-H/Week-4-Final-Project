@@ -298,3 +298,17 @@ footer {
   margin-top: 12px;
   filter: invert(1);
 }
+
+/* MOBILE PHONES */
+
+@media (max-width: 768px) {
+  .nav__link {
+    font-size: 12px;
+  }
+  .movies__search {
+    font-size: 20px;
+  }
+  .movie__information {
+    font-size: 12px;
+  }
+}
