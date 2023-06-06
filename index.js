@@ -48,5 +48,7 @@ async function sortMovies(event) {
   } else if (filterOption === "old") {
     moviesArray.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
   }
-  moviesWrapperEl.innerHTML = movies.map((movie) => moviesHTML(movie)).join("");
+  moviesWrapperEl.innerHTML = moviesArray
+    .map((movie) => moviesHTML(movie))
+    .join("");
 }
