@@ -292,6 +292,7 @@ footer {
   text-align: center;
   width: 100%;
   filter: invert(1);
+  max-width: 1200px;
 }
 
 .footer__copyright {
@@ -303,12 +304,21 @@ footer {
 
 @media (max-width: 768px) {
   .nav__link {
-    font-size: 12px;
+    font-size: 20px;
   }
   .movies__search {
     font-size: 20px;
   }
-  .movie__information {
+  .movie__title {
     font-size: 12px;
+  }
+  .movie__year {
+    font-size: 12px;
+  }
+  .footer__description {
+    display: none;
+  }
+  .footer__link {
+    font-size: 16px;
   }
 }
