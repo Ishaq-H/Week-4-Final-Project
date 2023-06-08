@@ -29,6 +29,10 @@ function onSearchChange(event) {
   renderMovies(search);
 }
 
+function onSubmitMovie(event) {
+  event.preventDefault();
+}
+
 async function renderMovies(search) {
   let movies = await fetch(
     `https://www.omdbapi.com/?i=tt3896198&apikey=bdab0567&s=${search}`
